@@ -1,6 +1,6 @@
 package edu.jsu.mcis.cs310;
-import org.junit.*;
 
+import org.junit.*;
 import static org.junit.Assert.*;
 
 public class ExampleTest {
@@ -47,6 +47,15 @@ public class ExampleTest {
     public void testReverseMessage3() {
         String actual = main.reverse("Hickory Dickory Dock");
         assertEquals(expectedReverse3, actual);
+    }
+
+    // ✅ Custom test (your own)
+    @Test
+    public void testReverseSamCustom() {
+        String input = "NetBeans-310!";
+        String expected = "!013-snaeBteN";
+        String actual = main.reverse(input);
+        assertEquals(expected, actual);
     }
     
 }
